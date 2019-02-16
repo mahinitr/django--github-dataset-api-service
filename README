@@ -1,0 +1,32 @@
+
+
+To Run the App:
+------------------------
+pip install --user -r requirements.txt; python manage.py makemigrations && python manage.py migrate --run-syncdb && python manage.py runserver 0.0.0.0:8000
+
+
+
+To Run the Tests:
+------------------------
+pip install --user -r requirements.txt; python manage.py makemigrations && python manage.py migrate --run-syncdb && python manage.py test
+
+
+
+APIs:
+------------------------
+curl -X POST http://localhost:8000/events/ -H 'content-type:application/json' -d '@test_event.json'
+
+curl http://localhost:8000/events/
+
+curl http://localhost:8000/events/actors/2520459/
+
+curl -X PUT http://localhost:8000/actors/ -H 'content-type:application/json' -d '{"id": 2520459, "login": "joy30", "avatar_url": "https://avatars.com/2520459"}'
+
+curl http://localhost:8000/actors/
+
+curl http://localhost:8000/actors/streak/
+
+curl -X DELETE http://localhost:8000/erase/
+
+
+
