@@ -1,3 +1,24 @@
+This is a mini project for Rest API using Django framework
+Requirement is for a REST API service to provide events information using the Python Django framework.
+Add functionality to add and delete information as well as to perform some queries
+
+An event looks like:
+{
+  "id":4055191679,
+  "type":"PushEvent",
+  "actor":{
+    "id":2790311,
+    "login":"daniel33",
+    "avatar_url":"https://avatars.com/2790311"
+  },
+  "repo":{
+    "id":352806,
+    "name":"johnbolton/exercitationem",
+    "url":"https://github.com/johnbolton/exercitationem"
+  },
+  "created_at":"2015-10-03 06:13:31"
+}
+
 
 
 To Run the App:
@@ -5,11 +26,9 @@ To Run the App:
 pip install --user -r requirements.txt; python manage.py makemigrations && python manage.py migrate --run-syncdb && python manage.py runserver 0.0.0.0:8000
 
 
-
 To Run the Tests:
 ------------------------
 pip install --user -r requirements.txt; python manage.py makemigrations && python manage.py migrate --run-syncdb && python manage.py test
-
 
 
 APIs:
